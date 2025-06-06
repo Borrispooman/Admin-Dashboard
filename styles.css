@@ -2,7 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1.5;
+  font-family: "Roboto", system-ui;
+}
+
+
+.roboto-mid {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 
@@ -17,19 +27,21 @@
 .sidebar{
     grid-column: 1/2;
     grid-row:1/3;
-    background-color: rgb(49, 186, 235);
+    background-color: rgb(77, 105, 208);
 }
 
 .header{
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: aqua;
+    background-color: whitesmoke;
+    padding-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
 }
 
 .main-content{
     grid-column:2/3;
     grid-row:2/3;
-    background-color: bisque;
+    background-color: white;
 }
 
 .sidebar{
@@ -37,6 +49,7 @@
     flex-direction: column;
     align-items: start;
     gap: 40px;
+    color: white;
     
 }
 
@@ -46,11 +59,13 @@
     gap: 10px;
     align-items: center;
     margin-top: 35px;
+    color: white;
 }
 
-.sidebar-logo > img{
+.sidebar-logo > svg {
     height: 50px;
     width: 50px;
+    fill: white;
 }
 
 .siderbar-nav{
@@ -63,6 +78,7 @@
 .sidebar-group{
     display:flex;
     gap: 20px;
+    align-items: center;
 }
 
 .sb-nav-group1, .sb-nav-group2{
@@ -87,6 +103,10 @@
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+.search-group svg{
+    fill: black;
 }
 
 .greet-group{
@@ -120,6 +140,10 @@
     border-radius: 40px;
 }
 
+.mini-profile-nav > svg{
+    fill: black;
+}
+
 .mini-upload-nav{
     grid-column: 2/3;
     grid-row: 2/3;
@@ -132,17 +156,24 @@
     border-radius: 10px;
 }
 
+svg{
+    width: 25px;
+    height: 25px;
+    fill: white;
+}
+
 img{
     width: 25px;
     height: 25px;
 }
 
 button{
-    background-color: rgb(66, 141, 232);
+    background-color: blue;
     height: 40px;
-    width: 80px;
+    width: 100px;
     border-radius: 40px;
     border-style: none;
+    color: white;
 }
 
 .mini-upload-nav{
@@ -179,9 +210,29 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 10px;
-    background-color: antiquewhite;
+    gap: 7.5px;
+    background-color:  whitesmoke;
     padding: 20px;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#card svg{
+    fill: black;
+}
+
+#card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: grey;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+
 }
 
 .icons-container{
@@ -191,3 +242,62 @@ button{
     margin-right: 10px;
     margin-top: auto;
 }
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announce-container{
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announce{
+    padding: 10px;
+}
+
+.announce2, .announce3{
+    padding: 10px;
+    border-top-style:solid;
+    border-width: 0.08rem;
+}
+
+.announce-container p{
+    font-size: 1rem;
+    line-height: normal;
+}
+
+
+.trend-container{
+    padding: 15px;
+    display: flex; 
+    flex-direction:column;
+    gap: 20px;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+}
+
+
+.trend-tag p{
+    font-size: 0.9rem;
+    line-height: normal;
+}
+
+.trend{
+    display: flex;
+    gap: 10px;
+}
+
+
+.trend-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
